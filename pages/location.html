@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>システム詳細 | モノドコ - 倉庫ロケーション管理</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>モノドコ - 倉庫ロケーション管理</h1>
+            <p class="subtitle">商品とユニットの保管場所をQRと検索で即座に把握できるWebアプリ</p>
+        </div>
+    </header>
+
+    <div><p>　</p></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <h2>システム概要</h2>
+            <div class="content-box">
+                <p>
+                    モノドコは倉庫内の商品ロケーションを商品コード・ロット単位で管理し、検索・入庫・出庫・移動までを一つのUIで完結できるWebアプリです。<br>
+                    スマートフォンとPCの両方から使える構成で、ホーム・検索・読み取り・管理・DB管理をシンプルな導線にまとめています。<br>
+                    商品・ユニットのQRコードを併用し、正しい保管場所を即座に特定できるようにしました。<br>
+                    生成したQRを貼り付けて現場の棚を識別し、最新の在庫状況を途切れなく共有できます。<br>
+                    すべてのデータはSQLiteに保存され、管理者はDB管理画面から直接編集やリセットも行えます。
+                </p>
+            </div>
+        </section>
+
+        <!-- Background Section -->
+        <section id="background" class="section">
+            <h2>開発背景</h2>
+            <div class="content-box">
+                <p>
+                    倉庫で「どの棚に何があるか」を把握できず、現場の探索や問い合わせに時間がかかる課題がありました。<br>
+                    口頭や紙での管理では記録漏れが起こりやすく、ロット移動や出庫時に最新の保管場所を即座に確認できませんでした。<br>
+                    モノドコはQRコードと絞り込み検索を組み合わせ、スマホでも操作しやすい導線で入出庫を記録できるように設計しています。<br>
+                    導入時のハードルを下げるため、データベースはSQLiteのみで完結し、閉域ネットワーク内での利用を前提にしました。<br>
+                    現場の担当者が迷わず扱えるUIと、履歴を残しながら正確なロケーション管理ができる仕組みを提供します。
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <h2>主要機能</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>在庫検索</h3>
+                    <p class="project-description">
+                        商品コード・商品名・ロット番号・ユニット番号・在庫状況で絞り込んで検索できます。<br>
+                        絞り込み条件はいつでもリセットでき、一覧から必要な商品をすぐに特定可能です。<br>
+                        検索結果から出庫・移動をそのまま開始できます。
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>QR読み取りと入庫・移動</h3>
+                    <p class="project-description">
+                        カメラで商品QRを読み取ってロット番号とユニットを登録し、入庫を記録します。<br>
+                        ユニットQRを読み取れば、棚ごとの在庫内容を確認し、そのまま移動操作へ進めます。<br>
+                        QRと手入力の両方を使えるため、現場での運用に柔軟に対応できます。
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>商品・ユニット登録／QR生成</h3>
+                    <p class="project-description">
+                        管理画面から商品とユニットを新規登録・更新・削除できます。<br>
+                        登録時にQRコードを自動生成し、印刷して棚や商品に貼り付け可能です。<br>
+                        既存データからのQR再発行にも対応しています。
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>データベース管理・履歴</h3>
+                    <p class="project-description">
+                        DB管理画面で全商品のマスタ、ユニット、在庫データを一覧・直接編集できます。<br>
+                        不要データの削除や在庫テーブルのリセット、最新100件の履歴参照が行えます。<br>
+                        現場で起きた操作を追跡し、誤操作時の修正も即時に反映できます。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Points Section -->
+        <section id="keypoints" class="section">
+            <h2>工夫した点</h2>
+            <div class="content-box">
+                <p>
+                    <strong>現場導線を最短に：</strong><br>
+                    ・ホーム→検索/読み取り→管理→DB管理の流れを最短ステップに整理しました。<br>
+                    ・検索条件リセットや一覧からの直接操作で、ロケーション特定までの手数を減らしています。<br>
+                    ・スマホ表示を前提としたボタン配置で、片手でも扱いやすいUIにしています。<br>
+                    <br>
+                    <strong>QRファースト + 手入力の併用：</strong><br>
+                    ・商品QRとユニットQRを組み合わせて、入庫・出庫・移動を正確に記録します。<br>
+                    ・読み取りが難しい環境でも、手入力で同じ処理を進められる冗長構成です。<br>
+                    <br>
+                    <strong>シンプルなデータモデル：</strong><br>
+                    ・商品マスタ、ユニットマスタ、在庫テーブル、履歴テーブルを分離し、ロケーション管理に特化しました。<br>
+                    ・在庫ステータスはactive/shippedで管理し、0個時の出庫記録にも対応しています。<br>
+                    <br>
+                    <strong>閉域・ローカル運用に最適化：</strong><br>
+                    ・SQLite単体で動作し、追加ミドルウェアなしで構築できます。<br>
+                    ・Next.js API Routes + better-sqlite3の同期処理で、安定したレスポンスを確保しています。
+                </p>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="techstack" class="section">
+            <h2>開発環境（技術スタック）</h2>
+            <div class="tech-stack-container">
+                <div class="tech-category">
+                    <h3>フロントエンド</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Next.js 14 (App Router)</span>
+                        <span class="tech-tag">React 18</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">CSS Modules</span>
+                        <span class="tech-tag">jsQR（QR読み取り）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>バックエンド</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Next.js API Routes</span>
+                        <span class="tech-tag">Node.js 18+</span>
+                        <span class="tech-tag">qrcode（生成）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>データベース</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">better-sqlite3</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>認証</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">未実装（閉域・単一管理者運用）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>環境構築</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js 18+</span>
+                        <span class="tech-tag">npm scripts（dev/start/build）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>CI/CD・インフラ</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">GitHub Actions（検討中）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>開発ツール</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Git / GitHub</span>
+                        <span class="tech-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Selection Reason Section -->
+        <section id="tech-reason" class="section">
+            <h2>技術選定理由</h2>
+            <div class="content-box">
+                <p>
+                    <strong>【フロントエンド】</strong><br>
+                    Next.jsのApp RouterとReact 18で、検索や読み取り画面間の遷移を軽快にしつつ同一コードベースで管理しています。<br>
+                    TypeScriptでAPIリクエストやフォームの型を明確化し、入力ミスやデータ不整合を抑制します。<br>
+                    CSS Modulesによるスタイル分離で、画面単位の調整を素早く行えるようにしています。<br>
+                    <br>
+                    <strong>【バックエンド】</strong><br>
+                    Next.js API Routesを使い、在庫検索・入庫・出庫・移動・マスタ登録を同じプロジェクト内で完結させました。<br>
+                    better-sqlite3を同期処理で用いてレスポンスの安定性を優先し、セットアップの簡便さを担保しています。<br>
+                    qrcodeでラベル用QRを生成し、jsQRで読み取りできるため、登録から実運用までのQRフローを一貫させています。<br>
+                    <br>
+                    <strong>【データベース】</strong><br>
+                    SQLite単体で動作するため追加サーバーが不要で、`demo.db` を生成するだけで始められます。<br>
+                    単一ファイルのためバックアップやリセットが容易で、DB管理画面とも整合性を取りやすい構成です。<br>
+                    <br>
+                    <strong>【認証】</strong><br>
+                    現時点では閉域ネットワーク・単一管理者での運用を想定し、認証は未実装としています。<br>
+                    複数ユーザー運用が必要になった際に、権限管理と併せて拡張できるようにしています。<br>
+                    <br>
+                    <strong>【環境構築】</strong><br>
+                    Node.js環境があれば `npm install` と `npm start` で起動でき、開発時は `npm run dev` のホットリロードで開発効率を高めています。<br>
+                    追加の外部サービスに依存せず、ローカルと閉域の双方で同じ手順で動かせます。<br>
+                    <br>
+                    <strong>【CI/CD】</strong><br>
+                    将来的にGitHub Actionsでlintや簡易テストを自動化し、デプロイ作業を安定化させる計画です。<br>
+                    単一リポジトリに集約しているため、パイプラインの適用範囲も明確です。
+                </p>
+            </div>
+        </section>
+
+        <!-- Future Plans Section -->
+        <section id="future" class="section">
+            <h2>今後の予定</h2>
+            <div class="content-box">
+                <p>
+                    <strong>追加予定の機能：</strong><br>
+                    ・ユーザー認証と権限管理の導入（複数担当者での運用を想定）<br>
+                    ・商品・ユニットマスタのCSVインポート/エクスポート<br>
+                    ・履歴検索やダウンロード機能による監査性向上<br>
+                    ・QR読み取りUIの改善（暗所対応やリトライ導線強化）<br>
+                    ・データバックアップ/リストア機能の標準化<br>
+                    <br>
+                    <strong>公開予定：</strong><br>
+                    ・閉域ネットワーク内での運用を基本とし、外部公開は未定<br>
+                    <br>
+                    <strong>その他の計画：</strong><br>
+                    ・GitHub Actionsによる自動テスト・デプロイの整備<br>
+                    ・運用ドキュメントとトラブルシュートガイドの拡充<br>
+                    ・必要に応じたクラウド/オンプレ配置オプションの検証
+                </p>
+            </div>
+        </section>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="../index.html" style="display: inline-block; padding: 12px 30px; background-color: var(--color-accent-medium); color: var(--color-primary); text-decoration: none; border-radius: 5px; font-weight: 600; transition: background-color 0.3s ease;">
+                ← ポートフォリオトップへ戻る
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 モノドコ</p>
+            <p>edit date: 2025-12-31</p>
+        </div>
+    </footer>
+</body>
+</html>

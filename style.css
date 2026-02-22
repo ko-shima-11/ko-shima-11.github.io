@@ -1,0 +1,345 @@
+/* ========================================
+   Portfolio Site CSS
+   ======================================== */
+
+/* CSS Variables */
+:root {
+    /* Accent Colors */
+    --color-accent-light: #F0F4FC;
+    --color-accent-medium: #AAC5E2;
+    --color-accent-dark: #9AA7C1;
+    
+    /* Base Colors */
+    --color-primary: #2c3e50;
+    --color-background: #FAFAFA;
+    --color-white: #FFFFFF;
+    
+    /* Text Colors */
+    --color-text-primary: #333;
+    --color-text-secondary: #666;
+    --color-text-tertiary: #555;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-white) 100%);
+    color: var(--color-text-primary);
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--color-accent-medium);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+}
+
+/* Main Content */
+main {
+    padding: 60px 0;
+}
+
+.section {
+    margin-bottom: 80px;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--color-accent-medium);
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-accent-dark);
+}
+
+/* About Section */
+.content-box {
+    background-color: var(--color-white);
+    padding: 40px;
+    border-radius: 8px;
+    border: 2px solid var(--color-accent-medium);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 20px;
+}
+.content-box:hover {
+    border-color: var(--color-accent-dark);
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    /* border-radius: 10%; */
+    object-fit: cover;
+    /* border: 3px solid var(--color-accent-medium); */
+    flex-shrink: 0;
+}
+
+.content-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-tertiary);
+    flex: 1;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.skill-item {
+    background-color: var(--color-white);
+    padding: 35px 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+    border: 2px solid var(--color-accent-medium);
+}
+
+.skill-item:hover {
+    border-color: var(--color-accent-dark);
+}
+
+.skill-item h3 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.skill-duration {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.skill-image {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* 垂直方向は上に寄せる */
+    margin: 0 auto 20px auto;
+}
+
+.skill-image2 {
+    width: 130px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* 垂直方向は上に寄せる */
+    margin: 0 auto 20px auto;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 35px;
+}
+
+.project-card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    border: 2px solid var(--color-accent-medium);
+}
+
+.project-card:hover {
+    border-color: var(--color-accent-dark);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+}
+
+.project-description {
+    color: var(--color-text-tertiary);
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+.project-accent {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+}
+
+.project-accent strong {
+    color: var(--color-accent-dark);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 80px;
+    border-top: 3px solid var(--color-accent-dark);
+}
+
+footer p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .subtitle {
+        font-size: 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .content-box {
+        padding: 30px;
+    }
+
+    .skill-item {
+        padding: 25px 20px;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 40px 0;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .content-box {
+        padding: 20px;
+    }
+
+    .skill-item {
+        padding: 20px 15px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+}
+
+/* Tech Stack Section - 技術スタック表示用スタイル */
+.tech-stack-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.tech-category {
+    background-color: var(--color-white);
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid var(--color-accent-medium);
+    transition: border-color 0.3s ease;
+}
+
+.tech-category:hover {
+    border-color: var(--color-accent-dark);
+}
+
+.tech-category h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-accent-light);
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--color-accent-light);
+    color: var(--color-primary);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background-color: var(--color-accent-medium);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .tech-stack-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tech-category {
+        padding: 20px;
+    }
+}

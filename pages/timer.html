@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>システム詳細 | Ko-shima-11 Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>ポモドーロタイマー</h1>
+            <p class="subtitle">ポモドーロテクニックを効率的に実践できるアプリ</p>
+        </div>
+    </header>
+
+    <div><p>　</p></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <h2>システム概要</h2>
+            <div class="content-box">
+                <p>
+                    ポモドーロテクニックを効率的に実践できるアプリケーションです。<br>
+                    ユーザは自分の好きな作業時間と休憩時間を設定でき、効率よく作業を行うことができます。<br>
+                    数多くのカラーテーマや、タイマーグラフィックスを用意し、気分を上げながら作業を続けることができます。<br>
+                    また、作業の履歴を視覚的に表示し、日々のモチベーションを向上させます。
+                </p>
+            </div>
+        </section>
+
+        <!-- Background Section -->
+        <section id="background" class="section">
+            <h2>開発背景</h2>
+            <div class="content-box">
+                <p>
+                    スマホ世代は、集中力が低下しているといわれ続けています。それは自分も例外ではないはずだと考えています。<br>
+                    そのため、自分の設定した作業時間・休憩時間を繰り返しながら作業を行えるポモドーロテクニックは多用してきました。<br>
+                    しかし、市販のタイマーアプリは多機能すぎたり、UIが好みでなかったりして、長続きしませんでした。<br>
+                    そこで、自分が本当に使いたいと思えるシンプルで直感的なポモドーロタイマーアプリを開発しようと思い立ちました。
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <h2>主要機能</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>タイマー機能</h3>
+                    <p class="project-description">
+                        個人で作業時間・休憩時間・長休憩時間・セット数を設定でき、それに応じた時間の調整を行えるタイマー機能を提供します。<br>
+                        ユーザは自分が設定した時間・タイマースタイルを表示し、実行を行えます。<br>
+                        設定した時間に応じて自動で作業と休憩を切り替え、効率的な作業をサポートします。
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>カラーテーマ選択機能</h3>
+                    <p class="project-description">
+                        ユーザは自分の好みに応じてカラーテーマを選択できます。<br>
+                        複数のカラーバリエーションを用意しており、作業環境や気分に合わせて変更可能です。<br>
+                        ※後々カラーテーマ追加予定
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>履歴閲覧機能</h3>
+                    <p class="project-description">
+                        ユーザは自分の作業履歴を日別・週別で閲覧できます。<br>
+                        視覚的に作業の記録を確認することで、日々のモチベーション向上に繋がります。<br>
+                        ※後々グラフ表示等の機能追加予定
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>タイマースタイル選択機能</h3>
+                    <p class="project-description">
+                        デジタル、アナログ、砂時計など、複数のタイマーグラフィックスから選択できます。<br>
+                        自分の好みに合わせたスタイルで作業を進めることができ、視覚的な楽しさも提供します。<br>
+                        気分を上げながら作業を続けることができる工夫を施しています。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Points Section -->
+        <section id="keypoints" class="section">
+            <h2>工夫した点</h2>
+            <div class="content-box">
+                <p>
+                    <strong>シンプルで直感的なUI設計：</strong><br>
+                    ・市販のタイマーアプリは多機能すぎて使いにくいという課題を解決するため、本当に必要な機能だけに絞り込みました。<br>
+                    ・Tailwind CSSとHeadless UIを活用し、開発コストを抑えながらも使いやすさとデザイン性を両立させました。<br>
+                    ・アクセシビリティに配慮したUIコンポーネントを採用し、誰でも使いやすいシステムを実現しました。<br>
+                    <br>
+                    <strong>柔軟なカスタマイズ性：</strong><br>
+                    ・作業時間・休憩時間・長休憩時間・セット数を自由に設定できるようにしました。<br>
+                    ・複数のカラーテーマとタイマースタイルを選択でき、ユーザーの好みに合わせてカスタマイズ可能です。<br>
+                    <br>
+                    <strong>技術的な工夫：</strong><br>
+                    ・TypeScriptによる型安全性の確保により、時間計算やデータ管理における不具合リスクを軽減しました。<br>
+                    ・ローカルストレージを活用し、サーバー不要で動作する軽量なアプリケーションを実現しました。<br>
+                    ・Reactのコンポーネント指向開発により、再利用可能なUI要素で開発効率と保守性を向上させました。<br>
+                    <br>
+                    <strong>モチベーション向上の仕組み：</strong><br>
+                    ・作業履歴を視覚的に表示することで、日々の進捗を確認しやすくしました。<br>
+                    ・気分を上げながら作業できるよう、複数のグラフィックスとカラーテーマを提供しています。
+                </p>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="techstack" class="section">
+            <h2>開発環境（技術スタック）</h2>
+            <div class="tech-stack-container">
+                <div class="tech-category">
+                    <h3>フロントエンド</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Next.js 14.2.4</span>
+                        <span class="tech-tag">React 18.3.1</span>
+                        <span class="tech-tag">TypeScript 5.4.5</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Headless UI</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>バックエンド</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">なし（スタンドアロンアプリ）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>データベース</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">なし（ローカルストレージ使用）</span>
+                        <span class="tech-tag">PostgreSQL（将来実装予定）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>認証</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">なし（将来実装予定）</span>
+                        <span class="tech-tag">NextAuth.js（検討中）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>環境構築</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">npm</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>CI/CD・インフラ</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Vercel（予定）</span>
+                        <span class="tech-tag">GitHub Actions（予定）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>開発ツール</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Git / GitHub</span>
+                        <span class="tech-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Selection Reason Section -->
+        <section id="tech-reason" class="section">
+            <h2>技術選定理由</h2>
+            <div class="content-box">
+                <p>
+                    <strong>【フロントエンド】</strong><br>
+                    ポモドーロタイマーは、ユーザーが作業中に頻繁に操作するアプリケーションであるため、ストレスのない快適な操作感を提供することを最優先に考えました。そのため、シングルページアプリケーション（SPA）の開発に最適だと判断した、ReactとNext.jsを採用しました。<br>
+                    <br>
+                    Reactは再利用可能なUIコンポーネントを簡単に作成でき、タイマー・設定画面・履歴表示など、繰り返し使われるUI要素の開発効率と保守性を向上させることが期待できます。Next.jsはApp Routerによる直感的なルーティングや、サーバーサイドレンダリング（SSR）、静的サイト生成（SSG）などの機能により、SPAのデメリットである初回ロード時間を短縮することが期待できます。<br>
+                    <br>
+                    また、タイマーの状態管理や設定データの扱いにおいて、予期せぬバグを防ぐためにTypeScriptを導入しました。これにより型安全性と開発時の自動補完を活用し、時間計算やデータ管理における不具合のリスクを減少させることができます。<br>
+                    <br>
+                    UIについては、開発コストを抑えながらも使いやすさとデザイン性を表現したかったため、Tailwind CSSを採用しました。ユーティリティファーストのアプローチにより、カスタムCSSを最小限に抑えつつ、カラーテーマの切り替えなど柔軟なデザインを実現できます。加えて、Headless UIを使用することで、アクセシビリティに配慮した使いやすいUIコンポーネントを効率的に構築しました。<br>
+                    <br>
+                    <strong>【バックエンド】</strong><br>
+                    現時点では、ユーザーデータの永続化が不要であり、ブラウザのローカルストレージで十分に機能を実現できると判断したため、バックエンドは実装していません。将来的にユーザー登録機能や、複数デバイス間でのデータ同期が必要になった際に、必要最小限のAPIサーバーを追加する予定です。<br>
+                    <br>
+                    <strong>【データベース】</strong><br>
+                    現在はタイマー設定や作業履歴をブラウザのローカルストレージに保存しています。これにより、サーバーを必要とせず、オフラインでも動作する軽量なアプリケーションを実現できました。将来的にユーザー認証機能を追加する際には、PostgreSQLなどのデータベースの導入を検討する予定です。<br>
+                    <br>
+                    <strong>【認証】</strong><br>
+                    現時点では認証機能を実装していません。将来的に複数ユーザーやデータ同期機能が必要になった場合には、Next.jsと相性の良いNextAuth.jsなどの導入を検討します。<br>
+                    <br>
+                    <strong>【環境構築】</strong><br>
+                    Node.jsとnpmによるシンプルな環境構築を採用しました。ポモドーロタイマーはフロントエンドのみで完結するアプリケーションであり、複雑な環境設定が不要なため、誰でも簡単に開発を始められるよう配慮しました。<br>
+                    <br>
+                    <strong>【CI/CD】</strong><br>
+                    将来的にはGitHub Actionsを使用して、プルリクエスト時の自動テストやデプロイの自動化を実装し、開発効率をさらに向上させる予定です。<br>
+                    <br>
+                    <strong>【インフラ】</strong><br>
+                    Vercelへのデプロイを想定しています。Next.jsとの相性の良さと、GitHubとの連携による自動デプロイの手軽さ、そして個人使用に十分な無料枠があることを重視して選択する予定です。
+                </p>
+            </div>
+        </section>
+
+        <!-- Future Plans Section -->
+        <section id="future" class="section">
+            <h2>今後の予定</h2>
+            <div class="content-box">
+                <p>
+                    <strong>追加予定の機能：</strong><br>
+                    ・ユーザー認証機能の追加<br>
+                    ・複数デバイス間でのデータ同期機能<br>
+                    ・カラーテーマの追加（ユーザーの好みに合わせたバリエーション拡充）<br>
+                    ・履歴表示のグラフ化（作業状況を視覚的に分析できる機能）<br>
+                    ・データベース（PostgreSQL）の導入<br>
+                    <br>
+                    <strong>公開予定：</strong><br>
+                    ・2025年1月末までに公開予定<br>
+                    <br>
+                    <strong>その他の計画：</strong><br>
+                    ・GitHub Actionsによる自動テスト・デプロイの実装<br>
+                    ・Vercelへのデプロイとホスティング<br>
+                    ・ユーザーフィードバックを元にした継続的な改善<br>
+                    ・ドキュメントの充実化
+                </p>
+            </div>
+        </section>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="../index.html" style="display: inline-block; padding: 12px 30px; background-color: var(--color-accent-medium); color: var(--color-primary); text-decoration: none; border-radius: 5px; font-weight: 600; transition: background-color 0.3s ease;">
+                ← ポートフォリオトップへ戻る
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kota Shimamoto (ko-shima-11)</p>
+            <p>edit date: 2025-12-26</p>
+        </div>
+    </footer>
+</body>
+</html>

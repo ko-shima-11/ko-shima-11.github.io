@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>システム詳細 | 年賀状管理・宛名生成システム</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>年賀状管理・宛名生成システム</h1>
+            <p class="subtitle">住所録管理から宛名PDF生成までをシンプルに行えるWebアプリ</p>
+        </div>
+    </header>
+
+    <div><p>　</p></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <h2>システム概要</h2>
+            <div class="content-box">
+                <p>
+                    年賀状の宛名管理と印刷用PDFの生成を行うWebアプリケーションです。<br>
+                    もともとは自分の家族向けに作成したサービスで、家庭内での運用に特化しています。<br>
+                    住所録の登録・編集から、年ごとの送付状況の記録、宛名PDFの一括出力までを一つの画面で完結できます。<br>
+                    家族レコードとメンバーを分けて管理することで、連名表示や敬称の指定にも対応します。<br>
+                    CSVエクスポートにも対応し、データの持ち出しや整理も容易です。
+                </p>
+            </div>
+        </section>
+
+        <!-- Background Section -->
+        <section id="background" class="section">
+            <h2>開発背景</h2>
+            <div class="content-box">
+                <p>
+                    家族で使っている年賀状管理ソフトがありましたが、祖母などには操作が難しく、使いづらいという声がありました。<br>
+                    また、スマートフォンからも操作できるようにしたいという要望があり、外出先でも確認・更新できる仕組みが必要でした。<br>
+                    さらに、家族それぞれが自分の担当分を登録できるようにしたいという不満もありました。<br>
+                    これらの課題を解消するため、シンプルで分かりやすく、家族全員が使いやすい年賀状管理システムを作成することにしました。
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <h2>主要機能</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>住所録管理</h3>
+                    <p class="project-description">
+                        家族レコードを登録・編集・削除できます。<br>
+                        表示名、郵便番号、住所、メモなどをまとめて管理し、検索や並び替えにも対応しています。<br>
+                        タグ付けにより、親戚・友人・会社などの分類も可能です。
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>メンバー管理</h3>
+                    <p class="project-description">
+                        宛名に記載する個人を家族単位で管理できます。<br>
+                        連名への含有、敬称、表示順を設定し、印刷時の表記に反映します。<br>
+                        世帯単位の宛名と個人名を使い分けられます。
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>年別ステータス管理</h3>
+                    <p class="project-description">
+                        「送る予定」「送った」「届いた」を年ごとに記録できます。<br>
+                        前年の履歴から自動で翌年の初期値を設定でき、作業の手間を削減します。<br>
+                        世帯ごとの送付履歴を明確に把握できます。
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>宛名PDF一括出力</h3>
+                    <p class="project-description">
+                        選択した宛名をハガキサイズのPDFとして一括で出力できます。<br>
+                        縦書きレイアウトを基本とし、印刷用データとしてそのまま利用可能です。<br>
+                        複数件をまとめて出力することで準備時間を短縮します。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Points Section -->
+        <section id="keypoints" class="section">
+            <h2>工夫した点</h2>
+            <div class="content-box">
+                <p>
+                    <strong>シンプルで直感的なUI設計：</strong><br>
+                    ・毎年の住所録更新作業を想定し、登録・検索・出力の導線を最短にしました。<br>
+                    ・スマートフォンからも迷わず操作できるよう、画面構成をシンプルに整理しました。<br>
+                    ・操作が多い項目は固定配置し、作業の反復に強いUIにしています。<br>
+                    <br>
+                    <strong>宛名表記に合わせた柔軟性：</strong><br>
+                    ・世帯単位・個人単位の宛名を選択でき、連名表記にも対応しています。<br>
+                    ・敬称や表示順を細かく設定でき、印刷結果をイメージ通りに調整できます。<br>
+                    <br>
+                    <strong>データ構造の整理：</strong><br>
+                    ・家族レコードとメンバーを分離し、複数人の宛名や年別ステータスの管理を容易にしました。<br>
+                    ・CSV出力に対応し、データの外部保管や再利用を想定しています。<br>
+                    <br>
+                    <strong>運用のしやすさ：</strong><br>
+                    ・年別の送付履歴を持たせることで、年をまたぐ運用でも混乱しない設計にしました。<br>
+                    ・PDF出力機能を標準化し、印刷準備の作業時間を削減しています。
+                </p>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="techstack" class="section">
+            <h2>開発環境（技術スタック）</h2>
+            <div class="tech-stack-container">
+                <div class="tech-category">
+                    <h3>フロントエンド</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React 18</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Vite</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">React Query</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>バックエンド</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Python 3.10+</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>データベース</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">SQLAlchemy</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>認証</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">なし（将来実装予定）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>環境構築</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js 18+</span>
+                        <span class="tech-tag">npm / yarn</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>CI/CD・インフラ</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">GitHub Actions（予定）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>開発ツール</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Git / GitHub</span>
+                        <span class="tech-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Selection Reason Section -->
+        <section id="tech-reason" class="section">
+            <h2>技術選定理由</h2>
+            <div class="content-box">
+                <p>
+                    <strong>【フロントエンド】</strong><br>
+                    住所録の登録や検索など、入力と確認を繰り返す画面が多いため、操作の軽快さを重視してReactを採用しました。<br>
+                    Viteにより開発時のビルド速度を高め、変更の反映を素早く行える構成にしています。<br>
+                    <br>
+                    再利用可能なUIコンポーネントを構成しやすく、家族レコード・メンバー・タグなどの一覧を効率的に管理できます。<br>
+                    <br>
+                    TypeScriptを採用することで、入力フォームやAPIレスポンスの型を明確化し、データ不整合のリスクを減らしています。<br>
+                    <br>
+                    UIはTailwind CSSを採用し、画面ごとの調整を素早く行えるようにしています。<br>
+                    <br>
+                    <strong>【バックエンド】</strong><br>
+                    データの永続化とPDF生成を行うため、FastAPIを採用しました。<br>
+                    API設計がシンプルで、フロントエンドとの連携が容易な点を重視しています。<br>
+                    <br>
+                    <strong>【データベース】</strong><br>
+                    初期開発では導入コストを抑えるためSQLiteを採用しました。<br>
+                    家庭利用を想定し、軽量で扱いやすい構成を優先しています。<br>
+                    <br>
+                    <strong>【認証】</strong><br>
+                    現時点では認証機能を実装していません。将来的に複数ユーザーやデータ同期機能が必要になった場合に追加予定です。<br>
+                    <br>
+                    <strong>【環境構築】</strong><br>
+                    Node.jsとnpm/yarn、Python環境を用意すれば動作する構成です。<br>
+                    ローカルでも立ち上げやすい開発体験を重視しました。<br>
+                    <br>
+                    <strong>【CI/CD】</strong><br>
+                    将来的にはGitHub Actionsを使用して、プルリクエスト時の自動テストやデプロイの自動化を実装し、開発効率をさらに向上させる予定です。<br>
+                    <br>
+                    <strong>【インフラ】</strong><br>
+                    将来的にクラウド展開を検討し、ホスティングや運用をシンプルにできる構成を目指します。
+                </p>
+            </div>
+        </section>
+
+        <!-- Future Plans Section -->
+        <section id="future" class="section">
+            <h2>今後の予定</h2>
+            <div class="content-box">
+                <p>
+                    <strong>追加予定の機能：</strong><br>
+                    ・ユーザー認証とファミリー共有機能<br>
+                    ・複数デバイス間のデータ同期<br>
+                    ・宛名テンプレートの選択肢拡充<br>
+                    ・CSVの一括インポート/エクスポート強化<br>
+                    ・データベースの拡張（PostgreSQL等）<br>
+                    <br>
+                    <strong>公開予定：</strong><br>
+                    ・未定（家庭内利用を前提）<br>
+                    <br>
+                    <strong>その他の計画：</strong><br>
+                    ・GitHub Actionsによる自動テスト・デプロイの実装<br>
+                    ・ユーザーフィードバックを元にした継続的な改善<br>
+                    ・ドキュメントの充実化
+                </p>
+            </div>
+        </section>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="../index.html" style="display: inline-block; padding: 12px 30px; background-color: var(--color-accent-medium); color: var(--color-primary); text-decoration: none; border-radius: 5px; font-weight: 600; transition: background-color 0.3s ease;">
+                ← ポートフォリオトップへ戻る
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 年賀状管理・宛名生成システム</p>
+            <p>edit date: 2025-01-31</p>
+        </div>
+    </footer>
+</body>
+</html>

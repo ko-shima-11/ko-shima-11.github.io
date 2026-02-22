@@ -1,1 +1,126 @@
-<p>Hello ko-shima-11 pages</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ko-shima-11 Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Kota Shimamoto（ko-shima-11）</h1>
+            <p class="subtitle">高専専攻科の学生 | 27卒</p>
+        </div>
+    </header>
+
+    <div><p>　</p></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>自己紹介</h2>
+            <div class="content-box">
+                <img src="img/humanicon.png" class="profile-image">
+                <p>
+                    ポートフォリオをご覧いただきありがとうございます。 2027年卒業予定の高専専攻科生です。<br>
+                    現在は主にプログラミングやソフトウェア開発を専攻しており、最近はTypeScriptを用いたWeb開発の学習に注力しています。<br>
+                    本ページでは、これまでの学習の履歴や制作物をまとめています。小規模な開発が中心ではありますが、一つひとつ課題を持って取り組んできました。<br> 
+                    今後も新規開発はもちろん、既存システムのアップデートや公開も積極的に行う予定ですので、ぜひご覧いただけますと幸いです。
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2>プログラミング学習歴</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>C / C++ / C#</h3>
+                    <p class="skill-duration">3年</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Python</h3>
+                    <p class="skill-duration">3年</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Java</h3>
+                    <p class="skill-duration">2年</p>
+                </div>
+                <div class="skill-item">
+                    <h3>JavaScript / TypeScript</h3>
+                    <p class="skill-duration">1年</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>制作物</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>シフト自動生成システム（バックエンドのみ）</h3>
+                    <img src="img/calender.png" class="skill-image">
+                    <p class="project-description">
+                        ・特定の期間の間、登録されたシフト形態に合わせてシフトを自動生成するシステムのバックエンドを開発しました。<br>
+                        ・自動生成の部分では充足可能性判定問題を解くツールであるSMTソルバー(Z3)を使用し、効率的なシフト生成を実現しています。<br>
+                        ・必ず守るべき制約条件と、可能な限り守りたい制約条件を分けて設定できるようにしており、柔軟なシフト生成が可能です。<br>
+                    </p>
+                    <p class="project-accent"><strong>使用技術：</strong>Python, Z3 SMT Solver</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>ポモドーロ特化タイマー</h3>
+                    <img src="img/timer.png" class="skill-image">
+                    <p class="project-description">
+                        ・特定の期間の間、登録されたシフト形態に合わせてシフトを自動生成するシステムのバックエンドを開発しました。<br>
+                        ・作業時間と休憩時間を設定し、タイマーが終了すると通知を送る機能を備えています。<br>
+                        ・シンプルで使いやすいインターフェースを提供し、集中力を高めることを目的としています。<br>
+                        ・時計のデザインとして、デジタル、アナログ、そして砂時計の3種類を選択可能です。<br>
+                        ・またカラーも２種類から選択可能です。<br>
+                    </p>
+                    <p class="project-accent"><strong>使用技術：</strong>Next.js 14 / React 18 / TypeScript</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>倉庫内管理システム</h3>
+                    <img src="img/box.png" class="skill-image2">
+                    <p class="project-description">
+                        ・倉庫内のユニットに対して、在庫管理や入出庫管理を行うシステムを開発しました。<br>
+                        ・ユーザーはウェブインターフェースを通じて、在庫の追加、削除、更新を行うことができます。<br>
+                        ・追加機能では、QRコードからの読み込みに対応しており、迅速な入出庫処理が可能です。<br>
+                        ・また、入出庫の履歴を記録し、レポートを生成する機能も備えています。<br>
+                        ・このシステムは実際に企業と協力しながら、チームで開発を進めました。<br>
+                        ・詳しくは下記のページをご覧ください。<br>
+                        <a href="https://ko-shima-11.github.io/warehouse-management-system/" target="_blank" rel="noopener noreferrer">倉庫内管理システムの詳細ページ</a>
+                    </p>
+                    <p class="project-accent"><strong>使用技術：</strong>Next.js 14 / React 18 / TypeScript / SQlite（今後変更する可能性あり）</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>年賀状補助システム</h3>
+                    <img src="img/letter.png" class="skill-image">
+                    <p class="project-description">
+                        ・年賀状の宛名印刷を補助するシステムを開発しました。<br>
+                        ・ユーザーは住所録のCRUD操作が行え、システムが宛名ラベルを自動生成します。<br>
+                        ・生成されたラベルはPDF形式でダウンロード可能で、印刷して使用できます。<br>
+                        ・詳しくは下記のページをご覧ください。<br>
+                        <a href="https://ko-shima-11.github.io/warehouse-management-system/" target="_blank" rel="noopener noreferrer">倉庫内管理システムの詳細ページ</a>
+                    </p>
+                    <p class="project-accent"><strong>使用技術：</strong> Python / SQLite / Next.js 14 / React 18 / TypeScript</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kota Shimamoto (ko-shima-11)</p>
+            <p> edit date: 2025-12-10</p>
+        </div>
+    </footer>
+</body>
+</html>
