@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOSアプリ開発入門 | Ko-shima-11 Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>iOSアプリ開発入門</h1>
+            <p class="subtitle">ツール選定から始めるiOSアプリ制作ガイド</p>
+        </div>
+    </header>
+
+    <div><p>　</p></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <h2>はじめに</h2>
+            <div class="content-box">
+                <p>
+                    iOSアプリを作りたいと思ったとき、まず何から始めればよいか迷うことが多いと思います。<br>
+                    このページでは、ツール選定から開発環境の構築、基本的なアプリ制作の流れまでを順を追って解説します。<br>
+                    iOSアプリの開発にはApple公式のツールと言語を使うのが基本であり、以下で詳しく説明します。
+                </p>
+            </div>
+        </section>
+
+        <!-- Prerequisites Section -->
+        <section id="prerequisites" class="section">
+            <h2>必要な環境</h2>
+            <div class="content-box">
+                <p>
+                    iOSアプリを開発するうえで、まず確認すべき前提条件があります。<br>
+                    <br>
+                    <strong>必須：macOSが動作するMac</strong><br>
+                    iOSアプリの開発ツール（Xcode）はmacOS専用です。WindowsやLinuxでは動作しないため、Macが必須となります。<br>
+                    macOSのバージョンは、インストールするXcodeの要件に合わせて最新または準最新に保つことを推奨します。<br>
+                    <br>
+                    <strong>Apple Developer Account（任意・配布時に必要）</strong><br>
+                    実機での動作確認や、App Storeへの申請・配布を行うには、Apple Developer Programへの登録（年額約13,200円）が必要です。<br>
+                    シミュレータを使った開発・学習段階では無料のApple IDで始めることができます。
+                </p>
+            </div>
+        </section>
+
+        <!-- Tool Selection Section -->
+        <section id="tools" class="section">
+            <h2>ツール選定</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Xcode（開発環境）</h3>
+                    <p class="project-description">
+                        AppleがiOS・macOS・watchOS・tvOSアプリの開発向けに提供している公式の統合開発環境（IDE）です。<br>
+                        コードエディタ、デバッガ、UIデザインツール（Interface Builder / Xcode Previews）、シミュレータなどを一体で提供しており、iOSアプリ開発においては事実上唯一の選択肢です。<br>
+                        Mac App Storeから無料でダウンロードできます。
+                    </p>
+                    <p class="project-accent"><strong>入手先：</strong>Mac App Store</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Swift（プログラミング言語）</h3>
+                    <p class="project-description">
+                        Appleが開発したiOS / macOSアプリ向けの公式プログラミング言語です。<br>
+                        型安全性が高く、モダンな構文で学習しやすい設計になっています。Objective-Cとの互換性もあります。<br>
+                        現在のiOS開発では最も主流な言語であり、新規プロジェクトでの採用が推奨されています。<br>
+                        C・C++・Java・Pythonなどの経験があれば、比較的スムーズに習得できます。
+                    </p>
+                    <p class="project-accent"><strong>バージョン：</strong>Swift 5系（Xcode同梱）</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>SwiftUI（UIフレームワーク）</h3>
+                    <p class="project-description">
+                        Apple公式の宣言的UIフレームワークです。少ないコードでUIを構築でき、Xcodeのプレビュー機能を使ってリアルタイムに画面確認が可能です。<br>
+                        iOS 13以降を対象とするアプリであれば積極的に採用が推奨されており、今後の主流フレームワークです。<br>
+                        ReactやVue.jsのような宣言的UI経験があれば概念を理解しやすいでしょう。
+                    </p>
+                    <p class="project-accent"><strong>対応：</strong>iOS 13以降</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>UIKit（旧来のUIフレームワーク）</h3>
+                    <p class="project-description">
+                        長年使われてきた命令的UIフレームワークです。SwiftUIが登場するまでの標準であり、既存プロジェクトや複雑なカスタムUIが必要な場面ではまだ広く使われています。<br>
+                        SwiftUIと併用することも可能です。初めてiOS開発に挑戦するなら、まずSwiftUIを選ぶことを推奨しますが、業務やチームの方針に応じてUIKitを学ぶことも重要です。
+                    </p>
+                    <p class="project-accent"><strong>対応：</strong>iOS 2以降（全バージョン対応）</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Environment Setup -->
+        <section id="setup" class="section">
+            <h2>開発環境の構築手順</h2>
+            <div class="content-box">
+                <p>
+                    <strong>ステップ1：Xcodeのインストール</strong><br>
+                    Mac App Storeを開き、「Xcode」を検索してインストールします。容量が大きい（約10GB以上）ため、時間に余裕のあるときに行いましょう。<br>
+                    <br>
+                    <strong>ステップ2：初回起動と追加コンポーネントのインストール</strong><br>
+                    Xcodeを初めて起動すると、シミュレータや各種コンポーネントの追加インストールが求められます。指示に従ってインストールを完了させてください。<br>
+                    <br>
+                    <strong>ステップ3：Apple IDの設定</strong><br>
+                    Xcode → Settings（または Preferences）→ Accounts からApple IDを追加します。実機でのテスト配布や署名に使用します。<br>
+                    <br>
+                    <strong>ステップ4：プロジェクトの新規作成</strong><br>
+                    Xcodeを開いて「Create New Project」を選択し、プラットフォームに「iOS」、テンプレートに「App」を選びます。<br>
+                    - Product Name：アプリ名を入力<br>
+                    - Team：Apple IDを選択<br>
+                    - Organization Identifier：通常は「com.自分の名前」などの形式<br>
+                    - Interface：SwiftUI（推奨）またはStoryboard（UIKit）<br>
+                    - Language：Swift<br>
+                    <br>
+                    <strong>ステップ5：シミュレータでの動作確認</strong><br>
+                    画面上部のデバイス選択メニューでシミュレータ（例：iPhone 16）を選び、再生ボタン（▶）を押すとビルドが始まります。シミュレータ上でアプリが起動することを確認しましょう。
+                </p>
+            </div>
+        </section>
+
+        <!-- Basic App Structure -->
+        <section id="structure" class="section">
+            <h2>iOSアプリの基本構造</h2>
+            <div class="content-box">
+                <p>
+                    <strong>エントリーポイント</strong><br>
+                    SwiftUIプロジェクトでは <code>@main</code> アノテーションを付けた構造体がアプリのエントリーポイントとなります。<br>
+                    <br>
+                    <strong>View（画面）</strong><br>
+                    SwiftUIでは <code>View</code> プロトコルに準拠した構造体が画面の単位です。<code>body</code> プロパティの中にUIを宣言的に記述します。<br>
+                    <br>
+                    <strong>State（状態管理）</strong><br>
+                    <code>@State</code>・<code>@Binding</code>・<code>@ObservedObject</code>・<code>@StateObject</code> などのプロパティラッパーを使って、画面の状態を管理します。状態が変化すると画面が自動的に再描画されます。<br>
+                    <br>
+                    <strong>主要なUIコンポーネント</strong><br>
+                    ・<code>Text</code>：テキスト表示<br>
+                    ・<code>Button</code>：タップ操作<br>
+                    ・<code>TextField</code>：テキスト入力<br>
+                    ・<code>Image</code>：画像表示<br>
+                    ・<code>VStack / HStack / ZStack</code>：縦・横・重ねレイアウト<br>
+                    ・<code>List</code>：リスト表示<br>
+                    ・<code>NavigationStack</code>：画面遷移
+                </p>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="techstack" class="section">
+            <h2>技術スタック（推奨構成）</h2>
+            <div class="tech-stack-container">
+                <div class="tech-category">
+                    <h3>開発環境</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Xcode 16.x</span>
+                        <span class="tech-tag">macOS Sequoia / Sonoma</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>言語</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Swift 5.x</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>UIフレームワーク</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">SwiftUI（推奨）</span>
+                        <span class="tech-tag">UIKit（必要に応じて）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>データ永続化</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">UserDefaults（軽量設定値）</span>
+                        <span class="tech-tag">SwiftData / Core Data（複雑なデータ）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>バージョン管理</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Git / GitHub</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>テスト</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">XCTest（ユニットテスト）</span>
+                        <span class="tech-tag">XCUITest（UIテスト）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>配布</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">App Store Connect</span>
+                        <span class="tech-tag">TestFlight（ベータ配布）</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>学習リソース</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Apple Developer Documentation</span>
+                        <span class="tech-tag">Swift Playgrounds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Path Section -->
+        <section id="learning" class="section">
+            <h2>学習の進め方</h2>
+            <div class="content-box">
+                <p>
+                    <strong>1. Swift言語の基礎を学ぶ</strong><br>
+                    ・変数・定数・型・条件分岐・ループ・関数・クロージャ・構造体・クラス・プロトコルを理解する<br>
+                    ・「Swift Playgrounds」（iPadまたはMacで無料利用可能）で実際にコードを動かしながら学ぶのが効果的です<br>
+                    ・参考：<a href="https://developer.apple.com/swift/" target="_blank" rel="noopener noreferrer">Apple公式 Swift紹介ページ</a><br>
+                    <br>
+                    <strong>2. SwiftUIの基礎を学ぶ</strong><br>
+                    ・View・State・Binding・NavigationStack・Listなどの主要コンポーネントを理解する<br>
+                    ・Xcodeのプレビュー機能を活用してリアルタイムにUIを確認しながら学習する<br>
+                    ・参考：<a href="https://developer.apple.com/tutorials/swiftui" target="_blank" rel="noopener noreferrer">Apple公式 SwiftUIチュートリアル</a><br>
+                    <br>
+                    <strong>3. 小さなアプリを作ってみる</strong><br>
+                    ・ToDoリスト、電卓、天気表示アプリなど、シンプルな題材から始めると実践的なスキルが身につきます<br>
+                    ・GitHubにコードを公開することでポートフォリオにもなります<br>
+                    <br>
+                    <strong>4. 実機でのテストと配布を学ぶ</strong><br>
+                    ・Apple Developer Programに登録し、TestFlightを使ったベータ配布を経験する<br>
+                    ・App Store Connectを通じたアプリの申請・審査プロセスを理解する
+                </p>
+            </div>
+        </section>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="../index.html" style="display: inline-block; padding: 12px 30px; background-color: var(--color-accent-medium); color: var(--color-primary); text-decoration: none; border-radius: 5px; font-weight: 600; transition: background-color 0.3s ease;">
+                ← ポートフォリオトップへ戻る
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kota Shimamoto (ko-shima-11)</p>
+            <p>edit date: 2026-03-14</p>
+        </div>
+    </footer>
+</body>
+</html>
