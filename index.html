@@ -11,7 +11,7 @@
     <header>
         <div class="container">
             <h1>Kota Shimamoto（ko-shima-11）</h1>
-            <p class="subtitle">高専専攻科（学部卒） | 27卒</p>
+            <p class="subtitle">Webアプリケーション開発 / TypeScript 学習中</p>
         </div>
     </header>
 
@@ -25,10 +25,10 @@
             <div class="content-box">
                 <img src="img/humanicon.png" class="profile-image">
                 <p>
-                    ポートフォリオをご覧いただきありがとうございます。 2027年卒業予定の高専専攻科生です。<br>
-                    現在は主にプログラミングやソフトウェア開発を専攻しており、最近はTypeScriptを用いたWeb開発の学習に注力しています。<br>
-                    本ページでは、これまでの学習の履歴や制作物をまとめています。小規模な開発が中心ではありますが、一つひとつ課題を持って取り組んできました。<br> 
-                    今後も新規開発はもちろん、既存システムのアップデートや公開も積極的に行う予定ですので、ぜひご覧いただけますと幸いです。
+                    このページでは、これまでに学習・開発してきた制作物をまとめています。<br>
+                    現在はTypeScriptを中心に、Webアプリケーションの設計、実装、UI改善、公開までを一通り経験できるように取り組んでいます。<br>
+                    小規模な個人開発からチームでのシステム開発まで、目的に合わせて技術を選びながら、使いやすさと保守しやすさを意識して制作しています。<br>
+                    今後も既存システムの改善や新規アプリケーションの開発を継続し、実際に使える形で公開していく予定です。
                 </p>
             </div>
         </section>
@@ -110,6 +110,19 @@
                     </p>
                     <p class="project-accent"><strong>使用技術：</strong> Python / SQLite / Next.js 14 / React 18 / TypeScript</p>
                 </div>
+
+                <div class="project-card">
+                    <h3>3Dリバーシ</h3>
+                    <p class="project-description">
+                        ・6×6×3の多層盤面で遊ぶ、Web版の3Dリバーシを開発しています。中央レイヤーは6×6、外側レイヤーは中央寄り4×4を有効マスとする独自ルールです。<br>
+                        ・通常の縦横斜めに加えて、レイヤー方向も含めた3D方向の置ける場所判定、石反転、パス判定、終局判定をTypeScriptのルールエンジンとして分離しました。<br>
+                        ・4手ごとに外側レイヤーへ石を自動配置するイベントや、Easy / Normal / 最強級チャレンジのCPU対戦を実装しています。<br>
+                        ・盤面はレイヤー表示と3D全体表示を切り替えられ、Three.jsで回転・ズームしながら立体盤面を確認できます。<br>
+                        ・公開URLは下記から確認できます。<br>
+                        <a href="https://3d-reversi.3dreversi-support.workers.dev/" target="_blank" rel="noopener noreferrer">3Dリバーシの公開ページ</a>
+                    </p>
+                    <p class="project-accent"><strong>使用技術：</strong>TypeScript / Vite / Three.js / WebSocket / Cloudflare Workers</p>
+                </div>
             </div>
         </section>
     </main>
@@ -118,7 +131,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Kota Shimamoto (ko-shima-11)</p>
-            <p> edit date: 2025-12-10</p>
+            <p> edit date: 2026-06-08</p>
         </div>
     </footer>
 </body>
