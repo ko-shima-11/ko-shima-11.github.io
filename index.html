@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ko-shima-11 Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260609-night">
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container">
+    <header class="site-hero">
+        <div class="container hero-inner">
+            <p class="eyebrow">Portfolio · Web Development</p>
             <h1>Kota Shimamoto（ko-shima-11）</h1>
             <p class="subtitle">Webアプリケーション開発 / TypeScript 学習中</p>
+            <nav class="hero-nav" aria-label="ページ内ナビゲーション">
+                <a href="#about">自己紹介</a>
+                <a href="#skills">学習歴</a>
+                <a href="#projects">制作物</a>
+            </nav>
         </div>
     </header>
-
-    <div><p>　</p></div>
 
     <!-- Main Content -->
     <main class="container">
@@ -23,7 +27,7 @@
         <section id="about" class="section">
             <h2>自己紹介</h2>
             <div class="content-box">
-                <img src="img/humanicon.png" class="profile-image">
+                <img src="img/humanicon.png" class="profile-image" alt="ノートパソコンで作業する人物のイラスト">
                 <p>
                     このページでは、これまでに学習・開発してきた制作物をまとめています。<br>
                     現在はTypeScriptを中心に、Webアプリケーションの設計、実装、UI改善、公開までを一通り経験できるように取り組んでいます。<br>
@@ -62,7 +66,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>シフト自動生成システム（バックエンドのみ）</h3>
-                    <img src="img/calender.png" class="skill-image">
+                    <img src="img/calender.png" class="skill-image" alt="カレンダーのアイコン">
                     <p class="project-description">
                         ・特定の期間の間、登録されたシフト形態に合わせてシフトを自動生成するシステムのバックエンドを開発しました。<br>
                         ・自動生成の部分では充足可能性判定問題を解くツールであるSMTソルバー(Z3)を使用し、効率的なシフト生成を実現しています。<br>
@@ -73,7 +77,7 @@
 
                 <div class="project-card">
                     <h3>ポモドーロ特化タイマー</h3>
-                    <img src="img/timer.png" class="skill-image">
+                    <img src="img/timer.png" class="skill-image" alt="タイマーのアイコン">
                     <p class="project-description">
                         ・作業時間と休憩時間を設定し、タイマーが終了すると通知を送る機能を備えています。<br>
                         ・シンプルで使いやすいインターフェースを提供し、集中力を高めることを目的としています。<br>
@@ -85,7 +89,7 @@
 
                 <div class="project-card">
                     <h3>倉庫内管理システム</h3>
-                    <img src="img/box.png" class="skill-image2">
+                    <img src="img/box.png" class="skill-image2" alt="段ボール箱のアイコン">
                     <p class="project-description">
                         ・倉庫内のユニットに対して、在庫管理や入出庫管理を行うシステムを開発しました。<br>
                         ・ユーザーはウェブインターフェースを通じて、在庫の追加、削除、更新を行うことができます。<br>
@@ -100,7 +104,7 @@
 
                 <div class="project-card">
                     <h3>年賀状補助システム</h3>
-                    <img src="img/letter.png" class="skill-image">
+                    <img src="img/letter.png" class="skill-image" alt="手紙のアイコン">
                     <p class="project-description">
                         ・年賀状の宛名印刷を補助するシステムを開発しました。<br>
                         ・ユーザーは住所録のCRUD操作が行え、システムが宛名ラベルを自動生成します。<br>
